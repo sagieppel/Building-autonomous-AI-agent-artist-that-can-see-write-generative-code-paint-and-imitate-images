@@ -6,7 +6,7 @@ from PIL import Image
 import cv2
 concept =  "The most amazing complex inspiring image which capture all the most beautiful patterns of nature " # concept to be generated
 outdir="out_images//" # output directory
-API_key = ""Add API Key Here: https://openrouter.ai/docs/api/reference/authentication"" # OpenRouter API key
+API_key = "Add API Key Here: https://openrouter.ai/docs/api/reference/authentication"" # OpenRouter API key
 
 if not os.path.exists(outdir): os.mkdir(outdir)
 step=1
