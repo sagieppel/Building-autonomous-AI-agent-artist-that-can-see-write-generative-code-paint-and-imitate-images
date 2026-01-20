@@ -9,9 +9,11 @@ concept = "Monkey riding a motorcycle in the city"# concept to be generated
 #"Robot turtle with mechanical legs walking on the surface of mars, in sunset"
 #"complex underwater ecology with robots and animals"
 prompt = "Write a generative code that generate an image of '"+concept+("'. "  
-         "\nThe code should contain a function generate(out_path) that generated image and save it into out_path."
-          "\nDo not display the image or use any GUI functions. "
-          "\nYour response must come as a parsable json of the following format: {'code': only code ready to execute}.")
+         "The code should contain a function generate(out_path) that generated image and save it into out_path."
+          "Do not display the image or use any GUI functions. "
+          "Your response must come as a parsable json of the following format:"
+          "{'code': only code ready to execute}."
+          "Return raw JSON only. Do not use Markdown, code blocks, or backticks.")
 content = [{"type": "text", "text": prompt}, ]
 r = requests.post(# send request to OpenRouter API
     "https://openrouter.ai/api/v1/chat/completions",
