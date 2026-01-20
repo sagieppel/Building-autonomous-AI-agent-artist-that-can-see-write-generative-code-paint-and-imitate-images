@@ -16,7 +16,9 @@ while(step<5): # limit to 5 iterations
         prompt = "Write a generative code that generate an image of '" + concept + ("'. "
         "The code should contain a function generate(out_path) that generated image and save it into out_path."
         "Do not display the image or use any GUI functions. "
-        "Your response must come as a parsable json of the following format: {'code': only code ready to execute}.")
+        "Your response must come as a parsable json of the following format: 
+        "{'code': only code ready to execute}."
+         "Return raw JSON only. Do not use Markdown, code blocks, or backticks.")
 
         content = [
             {"type": "text", "text": prompt},
@@ -29,7 +31,9 @@ while(step<5): # limit to 5 iterations
         "analyze the  image and improve the code to better capture the concept and add details.  "
         "Do not display the image or use any GUI functions. "
         "Your response must come as a parsable json of the following format: "
-        "{'code': only code ready to execute'}")#,'continue':'break'/'continue' to indicate if further improvement is needed or is the code and image are perfect'}.")
+        "{'code': only code ready to execute}."
+        "Return raw JSON only. Do not use Markdown, code blocks, or backticks.")
+        
         content = [
          {"type": "text", "text": prompt2},
          {"type": "image_url", "image_url": {"url": data_url_gen_im}},
