@@ -23,8 +23,4 @@ Image_from_concept_recursive_improvment.py: Use LLM/AI agent to generate code th
 </p>
 Generative image from image
 
-<p float="left">
-  <img src="/gen1.jpg" width="45%" />
-  <img src="/pexels-sanaan-3125171.jpg" width="45%" />
-</p>
-Generative image from image
+ 
