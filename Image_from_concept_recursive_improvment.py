@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from PIL import Image
 import cv2
-concept =  "Combine methods from physics, math, biology and art to create the most complex, colorful and beautiful pattern ever" # concept to be generated
+concept =  "Combine methods from nature, physics, math, biology and art to create the most complex, colorful and beautiful pattern ever" # concept to be generated
 outdir="out_images//" # output directory
 API_key = "Add API Key Here: https://openrouter.ai/docs/api/reference/authentication"" # OpenRouter API key
 
