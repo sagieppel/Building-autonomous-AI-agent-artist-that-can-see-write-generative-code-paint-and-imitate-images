@@ -4,12 +4,14 @@ import base64, requests
 from pathlib import Path
 import json
 API_key = "Add API Key Here: https://openrouter.ai/docs/api/reference/authentication"
-output_img_path = "city2.png"  # path to save the generated image
+output_img_path = "generated_img.png"  # path to save the generated image
 input_image_path = "images/pexels-sanaan-3125171.jpg" # path to the input image to be replicated
 prompt = ("Look at the image and write python code that recreates the content of the image as best as possible. "
           "The code should contain a function generate(out_path) that generated image and save it into out_path."
           "Do not display the image or use any GUI functions. "
-          "Your response must come as a parsable json of the following format: {'code':<only code ready to execute>,'describe':<describe what you see in the image>}.")
+          "Your response must come as a parsable json of the following format:" 
+          "{'code':<only code ready to execute>,'describe':<describe what you see in the image>}."
+          "Return raw JSON only. Do not use Markdown, code blocks, or backticks.")
 image_data_url = "data:image/jpeg;base64," + base64.b64encode(Path(input_image_path).read_bytes()).decode() # encode input image as data URL
 content = [
             {"type": "text", "text": prompt},
