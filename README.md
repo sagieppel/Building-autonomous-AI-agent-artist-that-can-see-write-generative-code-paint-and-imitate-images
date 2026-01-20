@@ -12,3 +12,9 @@ Image_from_concept.py: Use LLM/AI agent to generate code that form image of give
 image2code2image.py: Use LLM/AI agen to generate code that form image  base on reference image 
 
 Image_from_concept_recursive_improvment.py: Use LLM/AI agent to generate code that form image of given textual description, but examine the code and improve it in a loop.
+
+ 
+<p float="left">
+  <img src="/gen1.jpg" width="45%" />
+  <img src="i/pexels-sanaan-3125171.jpg" width="45%" />
+</p>
