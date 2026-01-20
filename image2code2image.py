@@ -5,7 +5,7 @@ from pathlib import Path
 import json
 API_key = "Add API Key Here: https://openrouter.ai/docs/api/reference/authentication"
 output_img_path = "city2.png"  # path to save the generated image
-input_image_path = "images/pexels-shreyas-sane-54878068-7823009.jpg" # path to the input image to be replicated
+input_image_path = "images/pexels-sanaan-3125171.jpg" # path to the input image to be replicated
 prompt = ("Look at the image and write python code that recreates the content of the image as best as possible. "
           "The code should contain a function generate(out_path) that generated image and save it into out_path."
           "Do not display the image or use any GUI functions. "
