@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from PIL import Image
 import cv2
-concept =  "The most amazing complex inspiring image which capture all the most beautiful patterns of nature " # concept to be generated
+concept =  "Combine methods from physics, math, biology and art to create the most complex, colorful and beautiful pattern ever" # concept to be generated
 outdir="out_images//" # output directory
 API_key = "Add API Key Here: https://openrouter.ai/docs/api/reference/authentication"" # OpenRouter API key
 
@@ -16,7 +16,7 @@ while(step<5): # limit to 5 iterations
         prompt = "Write a generative code that generate an image of '" + concept + ("'. "
         "The code should contain a function generate(out_path) that generated image and save it into out_path."
         "Do not display the image or use any GUI functions. "
-        "Your response must come as a parsable json of the following format: 
+        "Your response must come as a parsable json of the following format: "
         "{'code': only code ready to execute}."
          "Return raw JSON only. Do not use Markdown, code blocks, or backticks.")
 
@@ -26,9 +26,9 @@ while(step<5): # limit to 5 iterations
     if step>1: # improve based on previous image and code
         data_url_gen_im = "data:image/jpeg;base64," + base64.b64encode(Path(gen_im_path).read_bytes()).decode()
         prompt2=(
-        "You are given  generated image that tries to represent  '" + concept +
-        "Followed by the code that generate this image. A"
-        "analyze the  image and improve the code to better capture the concept and add details.  "
+        "You are given  generated image that tries to represent  '" + concept + "'"
+        "Followed by the code that generate this image. "
+        "Analyze the  image and improve the code to better capture the concept and add details.  "
         "Do not display the image or use any GUI functions. "
         "Your response must come as a parsable json of the following format: "
         "{'code': only code ready to execute}."
@@ -44,8 +44,7 @@ while(step<5): # limit to 5 iterations
         "https://openrouter.ai/api/v1/chat/completions",
         headers={"Authorization": f"Bearer {API_key}"},
         json={
-            #"model": "openai/gpt-5.2-mini",
-            "model": "openai/gpt-5.2",
+            "model": "google/gemini-3-flash-preview",
             "messages": [{
                 "role": "user",
                 "content": content,
