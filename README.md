@@ -7,7 +7,7 @@ Agentic AI that create code that form images either from text concept or from re
   <img src="/gen_text4.jpg" width="45%" />
 </p>
 
-[You can find the full toturial associate with code at this LINK](https://medium.com/@sagieppel/building-ai-agent-that-can-write-code-see-the-world-paint-pictures-and-search-for-beauty-in-60-21766fe24050)
+[The code should be self-explanatory but you can find the full toturial associate with code at this LINK](https://medium.com/@sagieppel/building-ai-agent-that-can-write-code-see-the-world-paint-pictures-and-search-for-beauty-in-60-21766fe24050)
 
 
 
